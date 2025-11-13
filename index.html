@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Kitchen Organiser</title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<header class="site-header">
+			<h1>Kitchen Organiser</h1>
+			<p class="tagline">Track pantry items, expiry, and categories</p>
+		</header>
+
+		<main class="container">
+			<section class="controls">
+				<form id="addForm" class="add-form">
+					<input id="itemName" placeholder="Item name" required />
+					<input id="itemQty" placeholder="Qty (optional)" />
+                    <input id="itemExpiry" type="date" placeholder="Expiry date (optional)" />
+                    <input id="itemCost" placeholder="Cost (optional)" />
+					<select id="itemCategory">
+						<option value="Other">Other</option>
+						<option value="Pantry">Pantry</option>
+						<option value="Fridge">Fridge</option>
+						<option value="Freezer">Freezer</option>
+					</select>
+					<button type="submit">Add</button>
+				</form>
+
+				<div class="search-row">
+					<input id="search" placeholder="Search items, press enter to filter" />
+					<select id="filterCategory">
+						<option value="All">All</option>
+						<option value="Pantry">Pantry</option>
+						<option value="Fridge">Fridge</option>
+						<option value="Freezer">Freezer</option>
+						<option value="Other">Other</option>
+					</select>
+					<button id="exportBtn">Export JSON</button>
+					<input id="importFile" type="file" accept="application/json" />
+				</div>
+			</section>
+
+			<section class="list-section">
+				<ul id="itemsList" class="items-list" aria-live="polite"></ul>
+			</section>
+		</main>
+
+		<footer class="site-footer">
+			<small>Saved locally in your browser. Works offline.</small>
+		</footer>
+
+		<script src="script.js"></script>
+	</body>
+</html>
