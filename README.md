@@ -11,7 +11,6 @@ How to use:
 1. Open `index.html` in your browser (double-click or use a local web server).
 2. Add items with name, optional qty and category.
 3. Use search or category filter to find items.
-4. Export JSON to backup, or import a JSON array to merge.
 
 Notes:
 - Data is saved to browser `localStorage` under the key `kitchenItems_v1`.
